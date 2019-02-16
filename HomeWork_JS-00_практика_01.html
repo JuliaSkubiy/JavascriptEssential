@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Практика</title>
+    <script>
+    
+    var peopleQuantity;
+    var days;
+    var Egypt = 50;
+    var Turkey = 100;
+    var Bulgaria = 150;
+
+    /*var country = [
+        {name: "Egypt", priceForNight: 50},
+        {name: "Turkey", priceForNight: 100},
+        {name: "Bulgaria", priceForNight: 150},
+    ];*/
+    //var sumForOneDayAndPeople = 10;
+
+    var discount = 0.1;
+    var sum = 0;
+
+    function vacation(peopleQuantity, days, country){
+
+        if (peopleQuantity == 0 || days < 5){
+            document.write("<p> Помилка!");
+        }
+        else{
+            if (days == undefined){
+                days = 7;
+            }
+            else if (days > 10){
+                sum = sum * discount;
+            }
+        }
+
+        
+        for (i =0; i < country.length; i++){
+            document.write(country[i].name + " " + "ціна за поїздку складає: " + sum + " y.e." + "<br/>");
+            sum = priceForNight * peopleQuantity * days;
+        }
+
+
+    }
+
+    vacation(2, 9, country);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

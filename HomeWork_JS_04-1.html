@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <script>
+    
+    function add(a, b){
+        return a + b;
+    }
+
+    function sub(a, b){
+        return a - b
+    }
+
+    function mul(a, b){
+        return a * b;
+    }
+
+    function div(a, b){
+        return a / b;
+    }
+
+    var operant1 = prompt("Введіть перше число", "0");
+    var sing = prompt("Виберіть арифметичний знак +, -, /, * : ");
+    var operant2 = prompt("Введіть друге число", "0");
+    var result;
+
+    operant1 = parseInt(operant1);
+    operant2 = parseInt(operant2);
+
+    switch(sing){
+        case "+":
+        result = add(operant1, operant2);
+        break;
+        case "-":
+        result = sub(operant1, operant2);
+        break;
+        case "*":
+        result = mul(operant1, operant2);
+        break;
+        case "/":
+        result = div(operant1, operant2);
+        break;
+        default:
+        document.write(sing + " - неправельний арифметичний знак");
+    }
+    if (result !== undefined){
+    document.write(operant1 + sing + operant2 + " = " + result);
+    }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
