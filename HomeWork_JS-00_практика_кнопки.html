@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор</title>
+    <style>
+        body{
+            background-image: url(brain.jpg);
+        }
+        input{
+            width: 100px;
+            border-radius: 7px;
+            color: rgb(245, 237, 237);
+            background-color: rgb(81, 178, 235);
+        }
+    
+    </style>
+
+    <script>
+
+    /*4 кнопки - и на каждую повесить обработчик на нажатие. 
+    4 кнопки - это математические операции. Функции - 4.
+    Функция просит ввести 2 чилса и выполняет арифметическую операцию */
+
+
+function add(){
+    var a = +prompt("Введіть перше число", "0");
+    var b = +prompt("Введіть друге число", "0");
+    var sum = a + b;
+    alert(sum);
+}
+
+function sub(){
+    var a = prompt("Введіть перше число", "0");
+    var b = prompt("Введіть друге число", "0");
+    var sum = a - b;
+    alert(sum);
+}
+
+function mul(){
+    var a = prompt("Введіть перше число", "0");
+    var b = prompt("Введіть друге число", "0");
+    var sum = a * b;
+    alert(sum);
+}
+
+function div(){
+    var a = prompt("Введіть перше число", "0");
+    var b = prompt("Введіть друге число", "0");
+    var sum = a / b;
+    alert(sum);
+}
+
+    </script>
+</head>
+<body>
+
+    <p><input type="button" value="addition" onclick="add()"></p>
+
+    <p><input type="button" value="subtraction" onclick="sub()"></p>
+
+    <p><input type="button" value="multiplication" onclick="mul()"></p>
+
+    <p><input type="button" value="divide" onclick="div()"></p>
+    
+</body>
+</html>
