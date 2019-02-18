@@ -4,36 +4,40 @@
     <title>Практика</title>
     <script>
     
-    var peopleQuantity;
-    var days;
-    var country = ["Egypt", "Turkey", "Bulgaria"];
-
-    var sumForOneDayAndPeople = 100;
-    var discount = 0.1;
-    var sum = 0;
-
     function vacation(peopleQuantity, days, country){
+        var peopleQuantity;
+        var days;
+        var countryArr = ["Egypt", "Turkey", "Bulgaria"];
+
+        var sumForOneDayAndPeople = 100;
+        var discount = 0.9;
+        var sum = 0;
+
         if (peopleQuantity == 0 || days < 5){
             document.write("<p> Помилка!");
         }
 
         else{
-            sum = sumForOneDayAndPeople * peopleQuantity * days;
-
-            if (days === undefined){
-                days == 7;
+            if (days == undefined){
+                days = 7;
+                sum = sumForOneDayAndPeople * peopleQuantity * days;
             }
             else if (days > 10){
-                sum = sum * discount;
+                sum = sumForOneDayAndPeople * peopleQuantity * days * discount;
+            }
+            else{
+                sum = sumForOneDayAndPeople * peopleQuantity * days;
             }
 
-            for (i =0; i < country.length; i++){
-                document.write(country[i] + " " + "ціна за поїздку складає: " + sum + " y.e." + "<br/>");
+
+            for (i =0; i < countryArr.length; i++){
+                if (country == countryArr[i])
+                document.write(countryArr[i] + " " + "ціна за поїздку складає: " + sum + " y.e." + "<br/>");
             }
         }
     }
 
-    vacation(2, 10, country);
+    vacation(2, 12, "Turkey");
 
     </script>
 </head>

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Практика02</title>
+    <script>
+
+
+var peopleQuantity;
+var days;
+var country;
+var sum = 0;
+var discount = 0.9;
+
+
+function get () {
+
+    peopleQuantity = prompt ("Введіть кількість людей", "2");
+    days = prompt ("Введіть кількість днів", "7");
+    country = prompt ("Введіть одну з зазначених країн: Egypt, Turkey, Bulgaria",);
+}
+
+function count (){
+
+    if (peopleQuantity == 0){
+        sum = 0;
+        document.write("Ви не можете взяти путівку на 0 осіб.");
+        return;
+    }
+    else{
+        switch (country) {
+            case "Egypt": {
+                country = 100;
+                break;
+            }
+            case "Turkey": {
+                country = 120;
+                break;
+            }
+            case "Bulgaria": {
+                country = 150;
+                break;
+            }
+           default: {
+                document.write("Ми не надаєм путівок в " + country);
+                return;
+            }
+        }
+
+        sum = (days > 10) ? peopleQuantity * days * country * discount : peopleQuantity * days * country;
+    }
+
+    return sum;
+}   
+
+function result (){
+    if (days < 5){
+        document.write("<p>Неможна взяти путівку менше ніж на 5 днів!");
+    }
+    else if (sum != 0){
+        document.write("<p>Вітаємо!<br/> Ви замовили поїздку на " + peopleQuantity + "-х осіб. Терміном " + days + " днів.<br/> Ціна складає: " + sum + " y.e.");
+    }   
+    else{
+        document.write("<p>Помилка при заповненні!");
+    }
+}
+
+get ();
+count ();
+result ();
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
