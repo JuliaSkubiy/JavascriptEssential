@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+    div{
+        height: 200px;
+        width: 200px;
+        margin: 30px;
+        float: left;
+        border-radius: 10%;
+        background-color: rgb(233, 127, 127);
+    }
+
+    input{
+        width: 150px;
+        height: 50px;
+        margin: 50px;
+        clear: both;
+        border-radius: 20%;
+        background-color: rgb(228, 231, 34);
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <input type="button" value="Push" onclick="clickChangeColor()">
+
+    <input type="button" value="timer forward" onclick='autoSlider()'>
+    <input type="button" value="timer backward" onclick="autoSliderBack()">
+    
+    <script>
+
+            var d = document.getElementsByTagName("div");
+            var counter = 0;
+
+
+        function clickChangeColor(){
+            if(counter == 5) {
+                counter = 0;
+            }
+            for (var i = 0; i < d.length; i++){
+                d[i].style.backgroundColor = 'rgb(233, 127, 127)'; // червоний
+            }
+            d[counter].style.backgroundColor = "rgb(79, 190, 157)"; // зелений
+            counter++;
+        }
+
+
+        var timer;
+    
+        function autoSlider (){
+            timer = setInterval (clickChangeColor, 2000);
+        }
+    
+        
+
+
+        var count = 4;
+        var timerBack;
+
+        function clickChangeColorBack(){
+            if(count == -1) {
+                count = 4;
+            }
+            for (var i = 0; i < d.length; i++){
+                d[i].style.backgroundColor = 'rgb(233, 127, 127)'; // червоний
+            }
+            d[count].style.backgroundColor = "rgb(169, 238, 217)";
+            count--; 
+        }
+
+        function autoSliderBack (){
+            timerBack = setInterval (clickChangeColorBack, 1000);
+        }
+        
+    </script>
+</body>
+</html>
