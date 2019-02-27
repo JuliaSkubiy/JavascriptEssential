@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+    #field{
+        width: 1350px;
+        height: 550px;
+        background-color:rgba(193, 222, 248, 0.87); 
+    }
+    #square{
+        width: 130px;
+        height: 130px;
+        background-image: url(plant.png);
+        border-radius: 15%;
+        position: relative;
+        left: 600px;
+        top: 200px;
+    }
+    button{
+        width: 80px;
+        height: 30px;
+        margin: 30px;
+        border-radius: 15%;
+        /*position: relative;
+        top: 560px;*/
+        background-color: rgb(147, 250, 44);
+    }
+    </style>
+</head>
+<body>
+
+    <div id="field">
+        <div id="square"></div>
+    </div>
+
+    <button onclick="Left()">Left</button>
+    <button onclick="Right()">Right</button>
+    <button onclick="Top()">Top</button>
+    <button onclick="Bottom()">Bottom</button>
+
+    <script>
+
+        var square = document.getElementById("square");
+        var left = 600; 
+        var a = 210;
+
+
+        function Left(){
+            if(left < 1){
+                left = 600;
+            }
+            left = left - 20;
+            square.style.left = left + "px";
+        }
+
+
+        function Right(){
+            if(left > 1200){
+                left = 600;
+            }
+            left = left + 20;
+            square.style.left = left + "px";
+        } 
+
+
+
+        function Top(){
+            if(a < 20){
+                a = 210;
+            }
+            a = a - 20;
+            square.style.top = a + "px";
+        }
+
+        function Bottom(){
+            if(a > 400){
+                a = 210;
+            }
+            a = a + 20;
+            square.style.top = a + "px";
+        }
+            
+    </script>
+
+</body>
+</html>
