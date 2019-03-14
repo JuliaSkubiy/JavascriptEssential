@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div> Login
+        <input type="text" id="login">
+    </div>
+    <div> password
+        <input type="text" id="password">
+    </div>
+
+    <button onclick="valid()">submit</button>
+
+    <script>
+    var login = document.getElementById("login");
+    var pass = document.getElementById("password");
+    
+
+function valid(){
+if(login.value == null || pass.value == null){
+    login.style.backgroundColor = "red";
+    pass.style.backgroundColor = "red";
+}
+
+
+    </script>
+</body>
+</html>

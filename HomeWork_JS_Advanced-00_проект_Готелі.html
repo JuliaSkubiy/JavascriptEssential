@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Реєстрація в готелі</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(palm-trees.jpg);
+            font-family: 'Cormorant Infant', serif;
+            font-size: 20px;
+            color: rgb(252, 248, 248);
+        }
+        #bord{
+            width: 60%;
+            margin: 10px auto;
+        }
+        input{
+            margin: 10px;
+        }
+        fieldset{
+            width: 60%;
+            border-color: azure;
+        }
+        button{
+            width: 80px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 15%;
+            background-color: rgb(240, 126, 126);
+            color: rgb(253, 252, 252);
+            font-family: serif;
+        }
+        
+    </style>
+</head>
+
+<body>
+<div id="bord">
+    <form name="hotel" method="post">
+    <fieldset>
+        <label for="name">Ваше ім'я</label><br/>
+        <input type="text" id="name" autofocus><br/>
+
+        <label for="address">Введіть адресу доставки</label><br/>
+        <input type="text" id="address" pattern="/^[а-я\s]+?\d+/i"><br/>
+
+        <label for="tel">Ваш телефон</label><br/>
+        <input type="text" id="tel" required><br/>
+
+        <button type="submit" id="button1">Замовити</button>
+    
+
+    </fieldset>
+
+    <div>
+        <h5>Дати відпочинку</h5>
+        з
+        <input type="date" id="date1">
+        по
+        <input type="date" id="date2">
+        <button type="submit" id="button2">Вибрати</button>
+    </div>
+    
+    <div id="radiobutton">
+        <h5>Виберіть готель: </h5>
+        <input type="radio" name="rad" value="20"> 2-зірковий готель</br>
+        <input type="radio" name="rad" value="30"> 3-зірковий готель</br>
+        <input type="radio" name="rad" value="40"> 4-зірковий готель</br>
+        <input type="radio" name="rad" value="50"> 5-зірковий готель</br>
+    </div>
+
+    <div id="checkb">
+        <h5>Додатково:</h5>
+        <input type="checkbox" name="check" value="5">TV (+ 5 y.e.)<br/>
+        <input type="checkbox" name="check" value="7">Додаткове ліжко (+ 7 y.e.)<br/>
+        <input type="checkbox" name="check" value="10">Wi-Fi (+ 10 y.e.)</br>
+        <input type="checkbox" name="check" value="15">Басейн (+ 15 y.e.)</br>
+        <input type="checkbox" name="check" value="20">Спорт-зал (+ 20 y.e.)</br>
+    </div>
+
+
+    </form>
+</div>
+    
+    <script>
+
+        document.getElementById("name").onkeypress = function(event){
+           // console.log(event);
+            if(event.keyCode < 1040 || event.keyCode > 1103){
+                return false;
+            }
+        }
+
+        /*document.getElementById("address").onkeypress = function (event){
+            if(event.keyCode > 1040 || event.keyCode < 1103){
+                return true;
+            }
+            else{
+                return false;
+            }
+            
+            function validate(hotel,address) {
+                var reg = /^[а-я\s.]+?\d+/i;
+                var address = document.forms[hotel].elements[address].value;
+                if(reg.address(address) == false) {
+                    alert('Введите улицу и дом');
+                    return false;
+                }
+            }*/
+
+        document.getElementById("tel").onkeydown = function (event){
+            //console.log(event); // + keyCode: 187;  del - keyCode: 8
+            if(event.keyCode < 48 || event.keyCode > 57){
+                return false;
+            }
+        }
+
+
+
+    var price;
+    var dayPrice = 100;
+    var date1 = document.getElementById("date1");
+    var date2 = document.getElementById("date2");
+    var p;
+    var divBord = document.getElementById("bord");
+
+    var radio = document.getElementsByName('rad');
+
+    
+    document.getElementById('button2').onclick = function(){
+        var d1 = +(date1.value[date1.value.length-2] + date1.value[date1.value.length-1]);
+        var d2 = +(date2.value[date2.value.length-2] + date2.value[date2.value.length-1]);
+
+        price = (d2 - d1) * dayPrice; 
+        p = document.createElement("p");
+        p.innerHTML = "Ціна складає: " + price + " y.o";
+        p.style.backgroundColor = "rgb(240, 126, 126)";
+        p.style.height = "50" + "px";
+        divBord.appendChild(p);
+        event.preventDefault();
+        //return price;
+    }
+
+
+    function selectRadio(){
+       // radio = document.getElementsByName('rad');
+        for(var i = 0; i < radio.length; i++){
+            if(radio[i].checked){
+                return radio[i].value;
+            }
+        }
+    }
+
+
+
+    </script>
+
+</body>
+</html>

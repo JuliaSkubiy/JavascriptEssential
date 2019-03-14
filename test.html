@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Смена изображений</title>
+    <script>
+        window.addEventListener("load", function () {
+            var flag;
+            document.getElementById("changeBtn").addEventListener("click", function () {
+                if (flag) {
+                    //смена изображения, приводит к обращению на сервер если изображение на загружено и не закешировано
+                    document.getElementById("imgBtn").src = "1_car.jpg"; 
+                }
+                else {
+                    document.getElementById("imgBtn").src = "2_animal.jpg";
+                }
+                flag = !flag;
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <img id="imgBtn" src="1_car.jpg" alt="Button" />
+    <button id="changeBtn">Change</button>
+</body>
+</html>
