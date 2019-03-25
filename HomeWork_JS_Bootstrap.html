@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+        img{
+            border-radius: 10px;
+        }
+        nav{
+            background-color: rgb(248, 243, 190);
+        }
+        h3:hover{
+            color: rgb(141, 85, 22);;
+        }
+        .color{
+            color: rgb(117, 72, 20);
+            margin: 5px;
+        }
+        .color1{
+            margin: 15px;
+            font-size: x-large;
+        }
+        .card{
+            border-radius: 10px;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"><img src="logo_flower2.jpg"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="HomeWork_JS_Bootstrap.html"><h3>Головна</h3><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><h3>Кошик</h3></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="HomeWork-_login.html"><h3>Реєстрація</h3></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row" style="margin: 2rem;">
+            <div class="col-3">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link color" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" aria-controls="v-pills-home">Графік роботи</a>
+                <a class="nav-link color" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" aria-controls="v-pills-profile">Доставка</a>
+                <a class="nav-link color active" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" aria-controls="v-pills-messages">Контакти</a>
+                <a class="nav-link color" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" aria-controls="v-pills-settings">Ми на мапі</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade color1" id="v-pills-home" aria-labelledby="v-pills-home-tab">Працюємо для Вас щодня з 9:00 - 22:00, без перерви і вихідних. Презентуємо високу якість за найвигіднішими цінами.</div>
+                <div class="tab-pane fade color1" id="v-pills-profile" aria-labelledby="v-pills-profile-tab">Щодня з 10:00 до 21:00.<br/> Завжди вчасно, без затримок.</div>
+                <div class="tab-pane fade show active color1" id="v-pills-messages" aria-labelledby="v-pills-messages-tab">м. Київ, вул. Січових стрільців, 22.<br/> тел. +380 (066) 666-66-66</div>
+                <div class="tab-pane fade color1" id="v-pills-settings" aria-labelledby="v-pills-settings-tab"><img src="map.jpg"/></div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img src="9.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">"101 поцілунок"</h5>
+                            <p class="card-text">Композиція з троянд та евкаліпту.</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="2.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">"Романтична наречена"</h5>
+                            <p class="card-text">Букет нареченої з весняних квітів та троянд.</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="7.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">"Ніжність"</h5>
+                            <p class="card-text">Легка романтична композиція з білих троянд, півонії та еустоми.</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="6.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">"Яскраві почуття"</h5>
+                            <p class="card-text">Букет XL розміру з троянд різних сортів, бузку та лимоніуму.</p>
+                        </div> 
+                    </div>
+                </div>
+			</div>
+        </div>
+
+        <div class="container">
+            <div class="row" style="margin: 3rem;">
+                <div class="col-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/SV6scuCsm2Q?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>	
+            </div>
+        </div>
+        
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>

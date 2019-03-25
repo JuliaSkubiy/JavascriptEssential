@@ -13,7 +13,6 @@
         }
         img{
             border-radius: 200px;
-           /* opacity: 1; */
 
         }
         button{
@@ -47,8 +46,69 @@
 
     <script>
 
+        var img = document.getElementById("img");
+        var btn1 = document.getElementById("car");
+        var btn2 = document.getElementById("animal");
+        var btn3 = document.getElementById("food");
 
-        function opacity(src){
+
+        btn1.onclick = function(){
+            //console.log(img.style.opacity);
+            var timerLow = setInterval(function(){
+                if (img.style.opacity == 0){
+                    clearInterval(timerLow);
+                    img.setAttribute("src", "1_car.jpg");
+                    getUp();
+                }
+                else{
+                    img.style.opacity = img.style.opacity - 0.1;
+                }
+            }, 50);
+        }
+
+
+        function getUp(){
+            var timerHigh = setInterval(function(){
+                if(img.style.opacity == 1){
+                    clearInterval(timerHigh); 
+                }
+                else{
+                    img.style.opacity = +img.style.opacity + 0.1
+                }
+            }, 50);
+        }
+
+
+        btn2.onclick = function(){
+            var timerLow = setInterval(function(){
+                if (img.style.opacity == 0){
+                    clearInterval(timerLow);
+                    img.setAttribute("src", "2_animal.jpg");
+                    getUp();
+                }
+                else{
+                    img.style.opacity = img.style.opacity - 0.1;
+                }
+            }, 50);
+        }
+
+
+        btn3.onclick = function(){
+            var timerLow = setInterval(function(){
+                if (img.style.opacity == 0){
+                    clearInterval(timerLow);
+                    img.setAttribute("src", "3_food.jpg");
+                    getUp();
+                }
+                else{
+                    img.style.opacity = img.style.opacity - 0.1;
+                }
+            }, 50);
+        }
+
+       
+
+       /* function opacity(src){
             var img = document.getElementById("img");
             img.style.opacity = 0.1;
             img.src = src;
@@ -92,6 +152,7 @@
             var img = document.getElementById("img");
             opacity("3_food.jpg");
         }
+        */
 
      </script>
 </body>

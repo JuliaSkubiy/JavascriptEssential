@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(palm-trees.jpg);
+            font-family: 'Cormorant Infant', serif;
+            font-size: 20px;
+            color: rgb(252, 248, 248);
+        }
+        #bord{
+            width: 60%;
+            margin: 10px auto;
+            background-color: rgba(5, 73, 78, 0.342);
+            border-radius: 30px;
+            padding: 50px;
+            margin: 20px auto;
+        }
+        input{
+            margin: 10px;
+        }
+        fieldset{
+            width: 70%;
+            border-color: azure;
+            border-radius: 15px;
+            margin: auto auto 40px;
+            background-color: rgba(5, 49, 46, 0.404);
+        }
+        button{
+            width: 80px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 15%;
+            background-color: rgb(240, 126, 126);
+            color: rgb(253, 252, 252);
+            font-family: serif;
+        }
+        p{
+            height: 50px;
+            width: 300px;
+            padding: 10px;
+            background-color: rgb(240, 126, 126);
+            border-radius: 10px;
+            visibility: hidden;      
+        }
+    </style>
+</head>
+
+<body>
+<div id="bord">
+    <form name="hotel" method="post">
+        <fieldset>
+            <label for="name">Ваше ім'я</label><br/>
+            <input type="text" id="name" autofocus required><br/>
+
+            <label for="address">Введіть адресу доставки</label><br/>
+            <input type="text" id="address" required><br/>
+
+            <label for="tel">Ваш телефон</label><br/>
+            <input type="text" id="tel" required><br/>
+
+            <button type="submit" id="button1">Замовити</button>
+    
+
+        </fieldset>
+
+        <div>
+            <h5>Дати відпочинку</h5>
+            з
+            <input type="date" id="date1">
+            по
+            <input type="date" id="date2">
+        </div>
+    
+        <div id="radiobutton">
+            <h5>Виберіть готель: </h5>
+            <input type="radio" name="rad" value="200"> 2-зірковий готель</br>
+            <input type="radio" name="rad" value="300"> 3-зірковий готель</br>
+            <input type="radio" name="rad" value="400"> 4-зірковий готель</br>
+            <input type="radio" name="rad" value="500"> 5-зірковий готель</br>
+        </div>
+
+        <div id="checkb">
+            <h5>Додатково:</h5>
+            <input type="checkbox" class="ch" value="5">TV (+ 5 y.e.)<br/>
+            <input type="checkbox" class="ch" value="7">Додаткове ліжко (+ 7 y.e.)<br/>
+            <input type="checkbox" class="ch" value="10">Wi-Fi (+ 10 y.e.)</br>
+            <input type="checkbox" class="ch" value="15">Басейн (+ 15 y.e.)</br>
+            <input type="checkbox" class="ch" value="20">Спорт-зал (+ 20 y.e.)</br>
+        </div>
+
+        <p></p>
+        
+    </form>
+</div>
+    
+    <script>
+
+        document.getElementById("name").onkeypress = function(event){
+           // console.log(event);
+            if(event.keyCode < 1040 || event.keyCode > 1103){
+                return false;
+            }
+        }
+
+        document.getElementById("address").onkeypress = function(event){
+            if(event.keyCode < 1040 || event.keyCode > 1103){
+                return false;
+            }
+        }
+
+        document.getElementById("tel").onkeydown = function(event){
+            //console.log(event); // + keyCode: 187;  del - keyCode: 8
+            if(event.keyCode < 48 || event.keyCode > 57){
+                return false;
+            }
+        }
+
+        document.forms[0].onchange = function(e){
+
+            var sum = 0;
+            console.log(sum);
+
+
+            var date1 = document.getElementById("date1");
+            var date2 = document.getElementById("date2");
+            var d1 = +(date1.value[date1.value.length-2] + date1.value[date1.value.length-1]);
+            var d2 = +(date2.value[date2.value.length-2] + date2.value[date2.value.length-1]);
+            var days = (d2 - d1) * 20;
+
+            if(days != 0){
+                sum += days;
+            }
+        
+
+            var radio = document.getElementsByName('rad');
+            for(var i = 0; i < radio.length; i++){
+                if(radio[i].checked){
+                    sum += +radio[i].value;
+                }
+            }
+
+
+            var checkboxes = document.getElementsByClassName("ch");
+            for(var i = 0; i < checkboxes.length; i++){
+                if(checkboxes[i].checked){
+                    sum += +checkboxes[i].value;
+                }
+            }
+
+            var p = document.getElementsByTagName("p")[0];
+            if(sum != 0){
+                p.style.visibility = "visible";
+                p.innerHTML = "Ціна складає: " + sum + " y.o";
+            }
+
+        }
+
+
+
+
+/////////////////////////////////////////////// пробую LocalStorage
+
+/*  
+        function getTotal(){
+            var infoObj = {
+                inputName: inputName.value,
+                inputTel: 
+                date: 
+                hotel:
+                address: []
+            }
+            JSON.stringify
+        }
+
+
+    var inputName = document.getElementById("name");
+    var inputNameValue = inputName.value;
+
+    localStorage.name = inputNameValue;
+    ///console.log(localStorage.name);
+
+
+    var inputAddress = document.getElementById("address");
+    var inputAddressValue = inputAddress.value;
+
+    localStorage.address = inputAddressValue;
+    //console.log(localStorage.address);
+
+
+    var inpuTel = document.getElementById("tel");
+    var inpuTelValue = inpuTel.value;
+
+    localStorage.tel = inpuTelValue;
+
+
+    var inpuDate1 = document.getElementById("date1");
+    var inpuDate1Value = inpuDate1.value;
+
+    localStorage.date1 = inpuDate1Value;
+    //console.log(localStorage.date1);
+
+
+    var inpuDate2 = document.getElementById("date2");
+    var inpuDate2Value = inpuDate2.value;
+
+    localStorage.date2 = inpuDate2Value;
+
+//// radio  checked   selectHotel
+
+    localStorage.radioChecked = selectHotel;
+    console.log(localStorage.radioChecked);
+
+*/
+
+
+
+
+    </script>
+
+</body>
+</html>
