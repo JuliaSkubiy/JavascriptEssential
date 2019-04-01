@@ -49,9 +49,10 @@
       
     </style>
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Florist">
+
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#"><img src="logo_flower2.jpg"/></a>
+        <a class="navbar-brand" href="#"><img itemprop="logo" src="logo_flower2.jpg"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,7 +60,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="HomeWork_JS_Bootstrap.html"><h3>Головна</h3><span class="sr-only">(current)</span></a>
+              <a class="nav-link" itemprop="url" href="HomeWork_JS_Bootstrap.html"><h3>Головна</h3><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><h3>Кошик</h3></a>
@@ -83,10 +84,10 @@
             </div>
             <div class="col">
               <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade color1" id="v-pills-home" aria-labelledby="v-pills-home-tab">Працюємо для Вас щодня з 9:00 - 22:00, без перерви і вихідних. Презентуємо високу якість за найвигіднішими цінами.</div>
+                <div class="tab-pane fade color1" id="v-pills-home" aria-labelledby="v-pills-home-tab"><h3 itemprop="name">"Rose Market"</h3> працює для Вас щодня з <span itemprop="openingHours">9:00 - 22:00</span>.</div>
                 <div class="tab-pane fade color1" id="v-pills-profile" aria-labelledby="v-pills-profile-tab">Щодня з 10:00 до 21:00.<br/> Завжди вчасно, без затримок.</div>
-                <div class="tab-pane fade show active color1" id="v-pills-messages" aria-labelledby="v-pills-messages-tab">м. Київ, вул. Січових стрільців, 22.<br/> тел. +380 (066) 666-66-66</div>
-                <div class="tab-pane fade color1" id="v-pills-settings" aria-labelledby="v-pills-settings-tab"><img src="map.jpg"/></div>
+                <div class="tab-pane fade show active color1" id="v-pills-messages" aria-labelledby="v-pills-messages-tab"><span itemprop="address">м. Київ, вул. Січових стрільців, 22.</span><br/><span itemprop="telephone">тел. +380 (066) 666-66-66</span></div>
+                <div class="tab-pane fade color1" id="v-pills-settings" aria-labelledby="v-pills-settings-tab"><iframe itemprop="hasMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1698153004977!2d30.49741531529767!3d50.45656239480621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce66ec361925%3A0x5d4adf1162d5b76e!2z0YPQuy4g0KHQtdGH0LXQstGL0YUg0KHRgtGA0LXQu9GM0YbQvtCyLCAyMiwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1554123959965!5m2!1sru!2sua"  width="490" height="400" frameborder="0" style="border:rgb(250, 161, 102) 2px solid" allowfullscreen></iframe></div>
               </div>
             </div>
         </div>
@@ -98,34 +99,34 @@
       <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner p-1 mb-5">
           <div class="carousel-item active">
-            <img src="flower-1.jpg" class="d-block w-100" alt="магазин">
+            <img itemprop="photo" src="flower-1.jpg" class="d-block w-100" alt="Наш магазин">
           </div>
           <div class="carousel-item">
-            <img src="flower-2.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-2.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="flower-3.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-3.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="flower-4.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-4.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="flower-5.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-5.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="flower-6.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-6.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="flower-7.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-7.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="flower-8.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-8.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="flower-9.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-9.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="flower-10.jpg" class="d-block w-100">
+            <img itemprop="image" src="flower-10.jpg" class="d-block w-100">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
@@ -141,19 +142,19 @@
   </div>
 </div>
 
-        <div class="container">
+        <div class="container" itemprop="owns" itemscope itemtype="http://schema.org/OwnershipInfo">
             <div class="row">
                 <div class="col">
                     <div class="card w-100">
-                        <img src="9.jpg" class="card-img-top">
+                        <img itemprop="image" src="9.jpg" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">"101 поцілунок"</h5>
-                            <p class="card-text">Композиція з троянд та евкаліпту.</p>
+                            <h5 class="card-title" itemprop="name">"101 поцілунок"</h5>
+                            <p class="card-text" itemprop="description">Композиція з троянд та евкаліпту.</p>
                             <button type="button" class="btn1" data-toggle="modal" data-target=".bd-example-modal-lg">Open</button>
                             <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
-                                  <img src="9.jpg"/>
+                                  <img itemprop="image" src="9.jpg"/>
                                 </div>
                               </div>
                             </div>
@@ -162,15 +163,15 @@
                 </div>
                 <div class="col">
                     <div class="card w-100">
-                        <img src="2.jpg" class="card-img-top">
+                        <img itemprop="image" src="2.jpg" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">"Романтична наречена"</h5>
-                            <p class="card-text">Букет нареченої з весняних квітів та троянд.</p>
+                            <h5 class="card-title" itemprop="name">"Романтична наречена"</h5>
+                            <p class="card-text" itemprop="description">Букет нареченої з весняних квітів та троянд.</p>
                             <button type="button" class="btn1" data-toggle="modal" data-target=".bd-example2-modal-lg">Open</button>
                             <div class="modal fade bd-example2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
-                                  <img src="2.jpg"/>
+                                  <img itemprop="image" src="2.jpg"/>
                                 </div>
                               </div>
                             </div>
@@ -179,15 +180,15 @@
                 </div>
                 <div class="col">
                     <div class="card w-100">
-                        <img src="7.jpg" class="card-img-top">
+                        <img itemprop="image" src="7.jpg" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">"Ніжність"</h5>
-                            <p class="card-text">Легка романтична композиція з білих троянд, півонії та еустоми.</p>
+                            <h5 class="card-title" itemprop="name">"Ніжність"</h5>
+                            <p class="card-text" itemprop="description">Легка романтична композиція з білих троянд, півонії та еустоми.</p>
                             <button type="button" class="btn1" data-toggle="modal" data-target=".bd-example3-modal-lg">Open</button>
                             <div class="modal fade bd-example3-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
-                                  <img src="7.jpg"/>
+                                  <img itemprop="image" src="7.jpg"/>
                                 </div>
                               </div>
                             </div>
@@ -196,15 +197,15 @@
                 </div>
                 <div class="col">
                     <div class="card w-100">
-                        <img src="6.jpg" class="card-img-top">
+                        <img itemprop="image" src="6.jpg" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">"Яскраві почуття"</h5>
-                            <p class="card-text">Букет XL розміру з троянд різних сортів, бузку та лимоніуму.</p>
+                            <h5 class="card-title" itemprop="name">"Яскраві почуття"</h5>
+                            <p class="card-text" itemprop="description">Букет XL розміру з троянд різних сортів, бузку та лимоніуму.</p>
                             <button type="button" class="btn1" data-toggle="modal" data-target=".bd-example4-modal-lg">Open</button>
                             <div class="modal fade bd-example4-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
-                                  <img src="6.jpg"/>
+                                  <img itemprop="image" src="6.jpg"/>
                                 </div>
                               </div>
                             </div>
