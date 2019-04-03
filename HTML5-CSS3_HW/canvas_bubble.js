@@ -1,49 +1,67 @@
 var canvas = document.getElementById("c1");
 var ctx = canvas.getContext("2d");
-var color = ["blue", "red", "green", "yellow"];
+var color = ["cornflowerblue", "darksalmon", "white", "mediumpurple", "crimson", "pink"];
 
-var z = 50;
-/*
-canvas.onmousemove = function (){
+var z = 10;
+
+
+/*canvas.onmousemove = function (){
     for(var i = 0; i < color.length; i++){
         ctx.arc(300, 200, 10, 0, Math.PI*2, false);
         ctx.fillStyle = color[i];
         ctx.fill();
-    }
-      
+    } 
 }*/ 
-
- //     ctx.clearRect(0, 0, 600, 400);   setInterval(selectColor, 1000);
-    
- //canvas.onmousemove = function (){ 
-
-
-    
-   // ctx.clearRect(0, 0, 600, 400);
-
-    
-
-
- //  function selectColor(){
- 
-        
+//     ctx.clearRect(0, 0, 600, 400);   setInterval(selectColor, 1000);   
+// ctx.clearRect(0, 0, 600, 400);
+//  function selectColor(){       
+// }
 
         
-   // }
 
-
- 
-    setInterval(() => {
+    function colorBubble() {
         //ctx.beginPath();
+        
+        //ctx.clearRect(0, 0, 1300, 600);
+
         for(var i = 0; i < color.length; i++){
-            ctx.arc(300, 200, z, 0, Math.PI*2, false);
+            ctx.arc(650, 300, z, 0, Math.PI*2, false);
             
-            z = z + 10;
+
+            
+            
             ctx.fillStyle = color[i];
-            ctx.fill();
+            ctx.globalAlpha = 0.2;
+
+            if(z == 800){
+                ctx.beginPath();
+                ctx.globalAlpha = 1;
+                ctx.clearRect(0, 0, 1300, 600);
+                z = 10; 
+
+               
+            }
+            
+            else{
+                z = z + 10; 
+            }
+            
+        ctx.fill();
         }    
-    }, 1000);
+    }
+
+    var timer = setInterval( colorBubble, 500);
+
+
+    canvas.onmousedown = function(){
+        clearInterval(timer);
+    }
+   
 
 
 
+
+
+
+   // canvas.addEventListener("mouseleave", colorBubble, false);
     
