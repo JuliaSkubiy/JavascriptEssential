@@ -1,6 +1,7 @@
+
 var canvas = document.getElementById("c1");
 var ctx = canvas.getContext("2d");
-var color = ["cornflowerblue", "darksalmon", "white", "mediumpurple", "crimson", "pink"];
+var color = ["cornflowerblue", "darksalmon", "rgb(211, 161, 161)", "mediumpurple", "crimson", "pink", "yellow"];
 
 var z = 10;
 
@@ -21,14 +22,11 @@ var z = 10;
 
     function colorBubble() {
         //ctx.beginPath();
-        
         //ctx.clearRect(0, 0, 1300, 600);
 
         for(var i = 0; i < color.length; i++){
-            ctx.arc(650, 300, z, 0, Math.PI*2, false);
-            
 
-            
+            ctx.arc(650, 300, z, 0, Math.PI*2, false);
             
             ctx.fillStyle = color[i];
             ctx.globalAlpha = 0.2;
@@ -39,10 +37,21 @@ var z = 10;
                 ctx.clearRect(0, 0, 1300, 600);
                 z = 10; 
 
-               
+                ctx.font = "bold 40px Segoe UI";
+                var text = "color";
+                var w = ctx.measureText(text);
+
+                ctx.shadowColor = color[i];
+                ctx.shadowOffsetX = 5;
+                ctx.shadowOffsetY = 5;
+                ctx.shadowBlur = 20;
+
+                ctx.fillText(text,(ctx.canvas.width - w.width) / 2, 150);   
+                
             }
             
             else{
+                
                 z = z + 10; 
             }
             
