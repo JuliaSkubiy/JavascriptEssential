@@ -21,8 +21,8 @@ var z = 10;
         
 
     function colorBubble() {
-        //ctx.beginPath();
-        //ctx.clearRect(0, 0, 1300, 600);
+        ctx.beginPath();
+        ctx.clearRect(0, 0, 1300, 600);
 
         for(var i = 0; i < color.length; i++){
 
@@ -44,10 +44,9 @@ var z = 10;
                 ctx.shadowColor = color[i];
                 ctx.shadowOffsetX = 5;
                 ctx.shadowOffsetY = 5;
-                ctx.shadowBlur = 20;
+                ctx.shadowBlur = 5;
 
-                ctx.fillText(text,(ctx.canvas.width - w.width) / 2, 150);   
-                
+                ctx.fillText(text,(ctx.canvas.width - w.width) / 2, 150);       
             }
             
             else{
