@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>FlexBox</title>
+    <style>
+    body{
+        background-color: rgba(244, 230, 248, 0.541);
+        color:rgb(59, 0, 117);
+
+    }
+    #container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+        @media (min-width: 400px){
+            #login, .p{
+                display: none;
+            }
+        }
+        
+        @media (min-width: 650px) {
+            #login, .p{
+                display: block;
+            }
+        }
+
+
+    #articleLength{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items:flex-start;
+        width: 75%;
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        /*width: 100%;*/
+        height: 320px;
+        background-color: rgba(219, 184, 252, 0.753);
+        padding: 10px; 
+    }
+    #topArt{
+        width: 100%;
+        height: 300px;
+        margin: 0 0 10px;
+        background-image: url(1_passport.jpg);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    h3{
+        align-self: flex-start;
+        margin: auto 10px;
+        color: rgb(37, 3, 68);
+    }
+    .cont{
+        display: flex;
+        flex-direction: row;
+    }
+    img{
+        width: 30%;
+        height: 200px;
+        border-radius: 5px;
+        margin: 5px;
+        align-self: flex-start;
+    }
+    .p{
+        width: 70%;
+       /* height: 100%; */
+        margin: 10px 0 0 15px; 
+    }
+    footer{
+        background-color: rgb(237, 240, 64);
+        padding: 0 5px;
+        margin: 10px 5px;
+        border-radius: 4px;
+    }
+    #login{
+        width: 25%;
+    }
+    form{
+        margin: 20px 0 0 20px; 
+    }
+    #p1{
+        background-color: rgba(255, 255, 255, 0.795);
+        width: 100%;
+        height: 25%;
+        align-self: flex-end;
+    }
+    #btn{
+        background-color: rgba(233, 236, 62, 0.904); 
+        border-radius: 4px;
+    }
+    #topP{
+        margin: 5px;
+        /*font-style: italic;*/
+        font-weight: bold;
+        color: rgb(37, 3, 68);
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div id="topArt">
+        <div id="p1">
+            <p id="topP">Подорожі - найприємніший спосіб розвиватися, пізнавати нове і пізнавати в поїздках себе, знімати стрес, вчитися, знайомитися з новими людьми і культурами... Краща причина для подорожі - сама подорож.<input id="btn" type="button" value="read more"></p>
+        </div>
+    </div>
+    <div id="container">
+        <div id="articleLength">
+            <article>
+                <h3>Гори</h3>
+                <div class="cont">
+                    <img src="2_landscape.jpg">
+                    <p class="p">Гори… На них не можливо дивитись без захвату. Вони починаються тут, під самісінькими твоїми ногами, з невеличких кущиків чорниць і стрункими високими травинками, що закінчуються тугими колосочками, на яких, мов на струнах, грає вітер, перетворюючи простір навколо тебе на схвильоване, соломино - зелене море. Коли око вже не в змозі вловити того хвилювання, видається, що ті гори вкриті ніжним блідо – салатовим оксамитом, а далі...гори набувають пронизливого, сизо-голубого кольору.</p>
+                </div>
+                <footer><a href="#">read more</a></footer>
+            </article>
+            <article>
+                <h3>Море</h3>
+                <div class="cont">
+                    <img src="3_books.jpg">
+                    <p class="p">Якщо гори в Далмації трохи нагадують Кримські, то набережна в Трогірі – ялтинську набережну. Звісно, що тут набагато чистіше і приємніше, а пальми на трогірській набережній ефектніше. А ще – тут дуже прозоре і чисте море, яке просто кишить рибою. Трогірці ласкаво називають свою набережною «Рівою». Особливо велелюдно тут по вечорах, а найбільш затишно – зранку. На набережній – декілька архітектурних пам’яток. Форт-монастир Св. Миколая, Домініканський монастир та дзвіниця Св. Михаїла.</p>
+                </div>
+                <footer><a href="#">read more</a></footer>
+            </article>
+            <article>
+                <h3>Піший похід</h3>
+                <div class="cont">
+                    <img src="4_nature.jpg">
+                    <p class="p">Ви давно мрієте піти у похід? Справжній похід: коли після дня ходьби з наплічником на плечах, Ви задоволені побаченим і пройденим сідайте біля багаття і їсте найсмачнішу вечерю у Вашому житті. Ви і не думали, що гречка з тушонкою може бути такою смачною! А потім, Ви довго розмовляєте, жартуєте і смієтеся. Перед тим як піти в намет спати Ви обов’язково піднімете голову, щоб подивитися на небо. Такої кількості зірок як в горах Ви ніде не побачите.</p>
+                </div>
+                <footer><a href="#">read more</a></footer>
+            </article>
+        </div>
+        <div id="login">
+            <form>
+                <h4>User login</h4>
+                <label>User name</label> <br/>
+                <input type="text"> <br/>
+                <label>Password</label> <br/>
+                <input type="password"> <br/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
