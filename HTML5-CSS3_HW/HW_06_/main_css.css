@@ -1,0 +1,104 @@
+.art p {
+  margin: 10px;
+  color: white;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background-color: #6bc3cf;
+  border-radius: 5px;
+}
+header nav {
+  padding: 10px;
+}
+header nav img {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+header nav h2 {
+  color: white;
+  display: inline;
+  margin-left: 20px;
+}
+header nav h2:hover {
+  color: gray;
+  margin: 15px;
+  font-size: 30px;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #27707a;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 25px;
+}
+footer span {
+  color: black;
+}
+footer span:hover {
+  color: white;
+}
+
+#cont {
+  margin: 0;
+  padding: 0;
+}
+
+#artLength {
+  width: 100%;
+  margin-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f2fafb;
+}
+
+.art {
+  width: 90%;
+  height: 300px;
+  margin: auto;
+  border-radius: 10px;
+}
+.art h3 {
+  color: #f8e00c;
+  padding: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.art h3:hover {
+  color: white;
+}
+.art p {
+  font-size: 20px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.art p:hover {
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.art_1 {
+  background-image: url("1.jpg");
+  background-repeat: no-repeat;
+  background-color: #999999;
+}
+
+.art_2 {
+  background-image: url("2.jpg");
+  background-repeat: no-repeat;
+  background-color: #999999;
+}
+
+.art_3 {
+  background-image: url("3.jpg");
+  background-repeat: no-repeat;
+  background-color: #999999;
+}
+
+/*# sourceMappingURL=main_css.css.map */

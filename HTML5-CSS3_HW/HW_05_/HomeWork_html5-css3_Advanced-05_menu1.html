@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+           margin: 0;
+           padding: 5px;
+           width: 60px;
+           height: 60px;
+           background-color: rgba(255, 127, 80, 0.527);
+           transition: cubic-bezier(.16,1.27,.7,-0.54);
+           transition-property: width;
+           transition-duration: 2s;
+
+       }
+       .container:hover{
+           width: 98%;
+       }
+
+        #menu{
+            width: 50px;
+            height: 50px;
+            margin-top: 5px;
+            margin-left: 4px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+
+        }
+        #menu_ul{            
+            visibility: hidden;   
+            display: inline;        
+            /*transition: all ease 5s;display: none;display: inline;*/
+        }
+        #menu_ul:hover #menu_ul_2{
+            display: block;
+        }
+        .menu1{
+            margin-right: 10px;
+            display: inline;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            position: relative;
+            color: rgb(247, 240, 210);
+        }
+        .menu1:hover{
+            width: 200px;
+        }
+        #menu_ul_2{
+            position: absolute;
+            margin-left: 130px;
+            list-style-type: none;
+            color: rgb(119, 235, 3);
+            display: none;
+            padding-top: 5px;
+        }
+        .menu2:hover{
+            color: rgb(250, 204, 98);
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="container" id='container'>
+        <img id="menu" src="house-icon.jpg"> 
+        <ul id="menu_ul">
+            <li class="menu1">Home</li>
+            <li class="menu1">Аrticles
+                <ul id="menu_ul_2">
+                    <li class="menu2">Beauty</li>
+                    <li class="menu2">Sport</li>
+                    <li class="menu2">Movie</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <script>
+        document.getElementById('menu').onmousedown = function(){
+            var menu = document.getElementById('menu_ul');
+            menu.style.visibility = "visible";
+
+        }
+        
+
+       var container = document.getElementById("container");
+       
+       var styleCont = window.getComputedStyle(container);
+
+       if(styleCont.width == "60px"){
+           var menuUl = document.getElementById("menu_ul");
+           menuUl.style.visibility = "hidden";
+       }
+    
+
+    </script>
+</body>
+</html>

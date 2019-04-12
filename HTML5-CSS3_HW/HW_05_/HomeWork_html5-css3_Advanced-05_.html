@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #menu{
+            width: 50px;
+            height: 50px;
+            margin-top: 25px;
+            margin-left: 20px;
+            background-color: rgb(205, 151, 255);
+            border-radius: 50%;
+            transition: all ease 5s;
+        }
+        #menu:hover{
+            transform: scale(2);
+            /*transform-origin: 90% 90%;*/
+
+        }
+        .mystyle{
+            width: 1000px;
+            height: 500px;
+            border-radius: 0;
+            border: 2px solid black;
+            
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div>
+        <div id="menu">
+        </div>
+    </div>
+    <script>
+    document.getElementById('menu').onmousedown = function(){
+        var menu = document.getElementById('menu');
+        menu.classList.add("mystyle");
+        /*menu.style.borderRadius = "0px";
+        menu.style.transform = "scale(10)";
+        menu.style.transformOrigin = "-1px -1px";
+        menu.style.width = "100px";
+        menu.style.height = "20px";*/
+    }
+    </script>
+</body>
+</html>

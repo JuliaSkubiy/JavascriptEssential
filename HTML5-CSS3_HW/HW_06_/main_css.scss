@@ -1,0 +1,64 @@
+$color: rgb(107, 195, 207);
+$size: 100px;
+$sizePro: 90%;
+
+%base-class{
+    margin: $size/10;
+    color: lighten($color, $sizePro);
+}
+
+@import "header";
+@import "footer";
+
+#cont{
+    margin: 0;
+    padding: 0;
+}
+
+#artLength{
+    width: $width;
+    margin-top: $m*3;
+    padding-top: $m;
+    padding-bottom: $m*3;
+    border-radius: $m;
+    background-color: lighten($color, 35%);
+    
+}
+
+.art{
+    width: $sizePro;
+    height: $size*3;
+    margin: auto;
+    border-radius: $m*2;
+
+    h3{
+        color: rgb(248, 224, 12);
+        padding: $m*3;
+        font-family: Verdana, Geneva, Tahoma, sans-serif; 
+
+        &:hover{
+            color: $white;
+        }
+    }
+
+    p{
+        @extend %base-class;
+        font-size: $m*4;
+        padding: $m;
+        background-color: transparentize($black,.5);
+
+        &:hover{
+            background-color: $black;
+            border-radius: $m;
+            padding: $m*2;
+        }
+    }
+}
+
+@for $img from 1 through 3 {
+    .art_#{$img} {
+        background-image: url("#{$img}.jpg");
+        background-repeat: no-repeat;
+        background-color: lighten($black, 60%);
+    }
+}

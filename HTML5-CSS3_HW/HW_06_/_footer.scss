@@ -1,0 +1,20 @@
+$black: black;
+$height: 50px;
+
+footer{
+    width: $width;
+    height: $height;
+    background-color: darken($color, $sizePro/3);
+    border-radius: $m;
+    text-align: center;
+    padding-top: $m*5;
+
+
+    span{
+        color: $black;
+
+        &:hover{
+            color: $white;
+        }
+    }
+}

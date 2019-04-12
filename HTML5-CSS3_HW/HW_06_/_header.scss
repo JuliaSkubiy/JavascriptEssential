@@ -1,0 +1,33 @@
+$width: 100%;
+$white: white;
+$m: 5px;
+
+header{
+    width: $width;
+    height: 120px;
+    background-color: $color;
+    border-radius: $m;
+
+    nav{ 
+        padding: $m*2;
+
+        img{
+        width: $size;
+        height: $size;
+        margin-left: $m*2;
+        border-radius: $width/2;
+    }
+
+        h2{
+            color: $white;
+            display: inline;
+            margin-left: $m*4;
+            
+            &:hover{
+                color: darken($white, $width/2);
+                margin: $m*3;
+                font-size: $m*6;
+            }
+        } 
+    }
+}
