@@ -1,0 +1,9 @@
+table{
+    border: 1px solid black;
+    padding: 15px;
+    color: rgb(133, 9, 250);
+}
+ul{
+    color: rgb(255, 219, 13);
+    font-size: 18px;
+}

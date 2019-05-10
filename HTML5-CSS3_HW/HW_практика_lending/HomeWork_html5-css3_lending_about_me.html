@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="animate.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <div id="cont">
+    
+        <header id="head">
+            <img id="foto" src="./img/Julia.jpg"> 
+            <h2 id="name" class="test">Юлія Скубій</h2>
+            <div id="contact">20.05.89<br/>julia.skubiy@gmail.com<br/>+8(063)7118729</div>
+
+
+        </header>
+
+        <div id="workInfo">
+            <h4>Курси:</h4>
+            <p>2019 – програмування "FrontEnd Developer" в CYBERBIONIC SYSTEMATICS.</p>
+            <p>2017 – курси вождіння.</p>
+
+            <h4>Досвід:</h4>
+            <p>01.2013 – 06.2015 – радіо «Nostalgie» 99FM, звукорежисер ефіру та постпродакшин.</p>
+            <p>09.2010 – 12.2012 – Арт-центр Якова Гретера, адміністратор.</p>
+        </div>
+
+        <div id="lang">
+            <h4>Знання мов:</h4>
+            <ul>
+                <li>українська</li>
+                <li>російська</li>
+                <li>англійська</li>
+            </ul>
+
+        </div>
+
+        <div id="hobby">
+            <h4>Інтереси та захоплення:</h4>
+            <ul>
+                <li><img src="./img/paint-brush.png" class="icon">мистецтво</li>
+                <li><img src="./img/flower.png" class="icon">дизайн, флористика</li>
+                <li><img src="./img/sneakers.png" class="icon">ходьба на далекі дистанції, біг</li>
+            </ul>
+
+        </div>
+        
+    </div>
+
+
+    <script>
+    var flash = document.getElementsByClassName("test")[0];
+        flash.onmouseover = function () {
+           this.className = "animated swing";
+        }
+        flash.onmouseout = function () {
+          this.className = "test";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+
+#cont{
+    width: 60%;
+    height: 600px;
+    background-color: rgb(218, 194, 240);
+    display: flex;
+    
+    justify-content: center;
+
+
+    #foto{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    #lang{
+        
+
+    }
+
+    #hobby{
+
+        li{
+            list-style-type: none;
+        
+            .icon{
+                width: 30px;
+                height: 25px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

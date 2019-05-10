@@ -1,0 +1,22 @@
+#cont {
+  width: 60%;
+  height: 600px;
+  background-color: #dac2f0;
+  display: flex;
+  justify-content: center;
+}
+#cont #foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#cont #hobby li {
+  list-style-type: none;
+}
+#cont #hobby li .icon {
+  width: 30px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=css.css.map */

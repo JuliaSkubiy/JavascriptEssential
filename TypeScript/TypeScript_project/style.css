@@ -1,0 +1,37 @@
+#section{
+    width: 80%;
+}
+
+li{
+    list-style-type: none;
+    padding: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+
+.item{
+    background-color: blueviolet;
+}
+
+.food-item{
+    background-color: red;
+}
+
+.close-item{
+    background-color: blue;
+}
+
+.candy-item{
+    background-color: brown;
+}
+.fruit-item{
+    background-color: aqua;
+}
+
+.socks-item{
+    background-color: yellow;
+}
+
+.dress-item{
+    background-color: pink;
+}

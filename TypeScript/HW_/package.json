@@ -1,0 +1,12 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "HW_01.js",
+  "scripts": {
+    "build": "tsc -w",
+    "start": "lite-server"
+  },
+  "author": "JS",
+  "license": "ISC"
+}
