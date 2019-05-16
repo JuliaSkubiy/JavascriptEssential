@@ -1,0 +1,24 @@
+<div [ngClass]="{class1: true}">
+
+  <input type="text" [(ngModel)]="text[0].name">
+
+
+  <table [ngStyle]="{'border':'1px solid black', 'margin':'40px'}">
+  
+    <tr *ngFor="let item of Products">
+
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td [ngStyle]='{{a}}'>{{item.price}}</td>
+  
+    </tr>
+    <tr>
+      <td>{{text[0].id}}</td>
+      <td>{{text[0].name}}</td>
+    </tr>
+  
+  </table>
+
+  <button (click)="classRed()">Ціна</button>
+  
+  </div>
