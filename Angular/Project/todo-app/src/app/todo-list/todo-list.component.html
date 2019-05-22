@@ -7,13 +7,13 @@
   <tr>
     <th>Label</th>
     <th>Priority</th>
-    <th>Done</th>
+    <th >Done</th>
     <th>Actions</th>
   </tr>
-  <tr *ngFor="let todo of todos">
+  <tr *ngFor="let todo of todos" [class.classGreen]="tF">
     <td>{{todo.label}}</td>
     <td>{{todo.priority}}</td>
-    <td>{{todo.done ? '&#10003;' : '&#10005;'}}</td>
+    <td><input type="checkbox" (click)="flag()"/></td>
     <td><button (click)="Delet(todo)">Delet</button></td>
   </tr>
 </table>

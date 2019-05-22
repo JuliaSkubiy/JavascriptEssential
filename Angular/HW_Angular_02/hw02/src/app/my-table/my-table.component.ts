@@ -12,6 +12,7 @@ const Products = [{ id: 1, name : 'product 1', price : 100 },
   { id: 10, name : 'product 10', price : 1000 }
 ];
 
+
 @Component({
   selector: 'app-my-table',
   templateUrl: './my-table.component.html',
@@ -22,11 +23,14 @@ export class MyTableComponent implements OnInit {
   @Input()
   rows: number;
 
-  prods = Products.slice(0, this.rows);
+  prod = Products;
   
   constructor() { }
 
   ngOnInit() {
+    if(this.rows){
+      this.prod = Products.slice(0, this.rows);
+    }   
   }
 
 }
