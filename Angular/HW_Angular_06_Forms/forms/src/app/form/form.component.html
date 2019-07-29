@@ -1,0 +1,27 @@
+<div>
+
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+
+      <div>
+        <label for="login">login</label><br>
+        <input type="text" id="login" class="form-control" autofocus name="login" required
+              [(ngModel)]="user.login" #login="ngModel" />
+        <div [hidden]="login.valid || login.pristine">
+          Поле обов'язкове для заповнення
+        </div>
+      </div>  
+      <div>
+        <label for="password">password</label><br>
+        <input type="password" id="password" class="form-control" name="password" required 
+              [(ngModel)]="user.password" #password="ngModel"/>
+        <div [hidden]="password.valid || password.pristine">
+          Поле обов'язкове для заповнення
+        </div>
+      </div>
+      <p>
+        <input type="submit" value="Go!" [disabled]="!form.form.valid"/>
+      </p>
+
+  </form>
+
+</div>

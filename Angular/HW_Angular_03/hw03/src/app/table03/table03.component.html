@@ -1,11 +1,14 @@
 <div [ngClass]="{class1: true}">
 
-  <input type="text" [(ngModel)]="text[0].name">
+  <input type="text" [(ngModel)]="text[0].name" #textbox (keyup.enter)="onKeyup(textbox.value)">
+
+  <input type="text" #myinput (keyup.enter)="add(myinput.value)" />
+<button (click)="add(myinput.value)">Add</button>
 
 
   <table [ngStyle]="{'border':'1px solid black', 'margin':'40px'}">
   
-    <tr *ngFor="let item of Products">
+    <tr *ngFor="let item of prod">
 
         <td>{{item.id}}</td>
         <td>{{item.name}}</td>

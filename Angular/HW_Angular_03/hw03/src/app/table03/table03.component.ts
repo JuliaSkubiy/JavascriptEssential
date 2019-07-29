@@ -29,11 +29,27 @@ text = [
 
   constructor(private svc: ServisProdService) { }
 
+  prod = this.svc.Products;
+
+// --------------------------
+
+  // message: string;
+
+  //   onKeyup(data) {
+  //     this.message = data;
+  // }
+
+  list: string[] = [];
+
+    add(item: string){
+        this.list.push(item);
+    }
+
   ngOnInit() {
-    // for(let i =0; this.Products.length > i; i++){
-      // if(this.Products[i].price > 500){
-        // console.log("Red");
-      // }
+    // for(let i = 0; this.prod.length > i; i++){
+    //   if(this.prod[i].price > 500){
+    //     console.log("Red");
+    //   }
     
     // }
   }
