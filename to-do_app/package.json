@@ -1,0 +1,11 @@
+{
+  "name": "to-do_app",
+  "version": "1.0.0",
+  "description": "progect to-do list",
+  "main": "js_to-do.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julia Skubiy",
+  "license": "ISC"
+}

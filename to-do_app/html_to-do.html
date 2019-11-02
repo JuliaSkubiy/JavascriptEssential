@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="main_todo.css">
+</head>
+<body>
+    <div class="container">
+         
+        <header>
+            <div><h4>TodoList</h4></div>
+        </header>
+        <hr>
+
+        <div class="bodyContainer">
+            <input type="search" id="searchInut" name="" placeholder="search by title">
+            <select>
+                <option>all</option>
+                <option>open</option>
+                <option>done</option>
+            </select>
+            <select>
+                <option>all</option>
+                <option>high</option>
+                <option>normal</option>
+                <option>low</option>
+            </select>
+
+            <button id="myBtn">Create</button>
+
+<!-- модальне вікно -->
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <form id="form">
+                        <label for="title">Title:</label>
+                        <br>
+                        <input type="text" id="title" placeholder="Title">
+                        <br>
+                        <label for="textarea">Description:</label>
+                        <br>
+                        <textarea  id="textarea" cols="30" rows="10" placeholder="Description"></textarea>
+                        <br>
+                        <label for="select">Priority:</label>
+                        <br>
+                        <select id="select">
+                            <option>High</option>
+                            <option>Normal</option>
+                            <option>Low</option>
+                        </select>
+                    </form>
+                        <button class="cancel">Cancel</button>
+                        <button class="save">Save</button>
+                    
+                </div>
+            </div>
+
+            <div class="out"></div>
+
+        </div>
+        <hr>
+
+        <footer>
+            <h4>Julia Skubiy</h4>
+        </footer>
+    </div>
+    
+    <script src="js_to-do.js"></script>
+</body>
+</html>

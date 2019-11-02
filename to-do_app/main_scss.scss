@@ -1,0 +1,90 @@
+$color: rgb(126, 126, 126);
+$px: 5px;
+
+
+div{
+    margin: $px;
+    color: $color;
+}
+
+.bodyContainer{
+    width: 100%;
+    height: 70vh;
+    padding: $px*2 0;
+
+    select, button, input{
+        margin: 2px $px*2;
+        width: 150px;
+        height: 35px;
+    }
+
+    input{
+        width: 300px;
+    }
+
+    button{
+        border-radius: $px*2;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(253, 251, 236, 0.7);
+
+        
+
+        .modal-content{
+            border: 1px solid black;
+            margin: 5% auto;
+            padding: $px*5;
+            width: 300px;
+            background-color: white;
+
+            #title, #textarea, #select{
+                width: 250px;
+                margin: $px;
+            }
+            
+
+            .save, .cancel{
+                cursor: pointer;
+                width: 100px;
+                margin: $px*10 20px 0;
+            }
+        }
+    }
+    
+    .divPage{
+        border: 1px solid black;
+        min-width: 150px;
+        height: 150px;
+        margin: $px*2;
+        padding: $px $px*2;
+        float: left;
+    }
+
+    .btnSelectClass{
+        width: 50px;
+        height: $px*4;
+        background-color: $color;
+        float: right;
+        color: white;
+    }
+
+    span{
+        border: 1px dashed $color;
+        padding: $px;
+    }
+}
+
+
+
