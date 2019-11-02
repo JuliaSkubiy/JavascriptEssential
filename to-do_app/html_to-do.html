@@ -11,22 +11,22 @@
     <div class="container">
          
         <header>
-            <div><h4>TodoList</h4></div>
+            <div><h3>TodoList</h3></div>
         </header>
         <hr>
 
         <div class="bodyContainer">
             <input type="search" id="searchInut" name="" placeholder="search by title">
-            <select>
+            <select id="selectStatus">
                 <option>all</option>
                 <option>open</option>
                 <option>done</option>
             </select>
-            <select>
-                <option>all</option>
-                <option>high</option>
-                <option>normal</option>
-                <option>low</option>
+            <select id="priority">
+                <option value="all">all</option>
+                <option value="High">High</option>
+                <option value="Normal">Normal</option>
+                <option value="Low">Low</option>
             </select>
 
             <button id="myBtn">Create</button>
@@ -38,7 +38,7 @@
                     <form id="form">
                         <label for="title">Title:</label>
                         <br>
-                        <input type="text" id="title" placeholder="Title">
+                        <input type="text" id="title" placeholder="Title" autofocus>
                         <br>
                         <label for="textarea">Description:</label>
                         <br>
@@ -64,7 +64,10 @@
         <hr>
 
         <footer>
-            <h4>Julia Skubiy</h4>
+            <h5>Julia Skubiy</h5>
+            <img src="qr-code.gif" alt="qr-code">
+            <h5>for</h5>
+            <img src="ciklum.jpg" alt="logo_ciklum">
         </footer>
     </div>
     

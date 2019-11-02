@@ -8,6 +8,9 @@ let form = document.querySelector("#form");
 let out = document.querySelector(".out");
 let searchIn = document.querySelector("#searchInut");
 
+let selectStatus = document.querySelector("#selectStatus");
+let priority = document.querySelector("#priority");
+
 let div = document.createElement("div");
 
 // let todoTitle = document.createElement("h4");
@@ -15,9 +18,11 @@ let div = document.createElement("div");
 // let todoSelect = document.createElement("span");
 // let btnSelect = document.createElement("button");
 
-    let outText = "";
-    let outDescription = "";
-    let outSelect = "";
+    // let outText = "";
+    // let outDescription = "";
+    // let outSelect = "";
+
+
 
 let todoList = [];
 
@@ -29,8 +34,8 @@ if(localStorage.getItem("todo") != undefined){
         item
         console.log(item.todo);
     }      
-    
-    //  CreateOutPage ();
+    // CreateOutPage();
+    // out.appendChild(div);
 }
 
 btn.onclick = function(){
@@ -100,15 +105,14 @@ function CreateOutPage (){
     div.appendChild(todoSelect);
         
     
+
     btnSelect.innerHTML = "done";
     btnSelect.classList.add("btnSelectClass");
 
     div.appendChild(btnSelect);
     
-    btnSelect.onclick = function(){
-        
+    btnSelect.onclick = function(){   
         div.style.backgroundColor = "rgb(200, 200, 200)";
-        
         // out.removeChild(div);    
     }
 
@@ -120,28 +124,59 @@ function CreateOutPage (){
 
 
 
-////////////// input пошук
+/////////////////// фільтрація елементів
 
 searchIn.addEventListener("keyup", () => {
-    let filterSearch = searchIn.value
-    // .toUpperCase();
-    console.log(filterSearch);
+    let filterSearch = searchIn.value.toUpperCase();
+    // console.log(filterSearch);
+
+    let titeleOut = document.getElementsByTagName("h4");
+    // console.log(titeleOut);
+
+    for(let i=0; i < titeleOut.length; i++){
+    //    console.log(titeleOut[i].innerHTML);
+
+       if(titeleOut[i].innerHTML.toUpperCase().indexOf(filterSearch)> -1){
+            titeleOut[i].style.display = "block";   //замінити на div !!!
+       }
+       else{
+            titeleOut[i].style.display = "none";    //замінити на div !!!
+       }
+    }
+});
+
+selectStatus.onchange = function(){
+
+    let selectValue = selectStatus.value;
+    console.log(selectValue);
+
+    
+}
 
 
-    for(let key in todoList){
-        
-        console.log(todoList[key].todo[0]);
 
-        if(todoList[key].todo[0] == filterSearch){
-            // console.log("=");
-            div.style.display = "block";
+priority.onchange = function(){
+
+    let priorityValue = priority.value;
+    // console.log(priorityValue);
+
+    let spanValue = document.getElementsByTagName("span");
+
+    for(let i = 0; i < spanValue.length; i++){
+
+        spanValue[i].style.border = "";
+
+        // console.log(spanValue[i].value);
+        if(spanValue[i].innerHTML == priorityValue){
+            spanValue[i].style.border = "1px solid red";
         }
-        else{
-            div.style.display = "none";
-        }
+
+        // else{
+        //     spanValue[i].style.border = "1px solid red";
+        // }
     }
 
-})
+}
 
 
 

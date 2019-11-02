@@ -1,6 +1,16 @@
 div {
   margin: 5px;
-  color: #7a7a7a;
+  color: #7e7e7e;
+}
+
+footer {
+  display: flex;
+}
+footer h5 {
+  margin: auto 10px;
+}
+footer img {
+  height: 60px;
 }
 
 .bodyContainer {
@@ -60,12 +70,12 @@ div {
 .bodyContainer .btnSelectClass {
   width: 50px;
   height: 20px;
-  background-color: #7a7a7a;
+  background-color: #7e7e7e;
   float: right;
   color: white;
 }
 .bodyContainer span {
-  border: 1px dashed #7a7a7a;
+  border: 1px dashed #7e7e7e;
   padding: 5px;
 }
 
