@@ -13,14 +13,10 @@ let priority = document.querySelector("#priority");
 
 let div = document.createElement("div");
 
-// let todoTitle = document.createElement("h4");
-// let todoText = document.createElement("p");
-// let todoSelect = document.createElement("span");
-// let btnSelect = document.createElement("button");
-
-    // let outText = "";
-    // let outDescription = "";
-    // let outSelect = "";
+let todoTitle = document.createElement("h4");
+let todoText = document.createElement("p");
+let todoSelect = document.createElement("span");
+let btnSelect = document.createElement("button");
 
 
 
@@ -31,11 +27,35 @@ if(localStorage.getItem("todo") != undefined){
     todoList = JSON.parse(localStorage.getItem("todo"));
 
     for (let item of todoList) {
-        item
-        console.log(item.todo);
-    }      
+        
+        // console.log(item.todo);
+
+        todoTitle.innerHTML = item.todo;
+        todoText.innerHTML = item.description;
+        todoSelect.innerHTML = item.priority;
+    }
+
+////    //////    /////////////////////
+        div.appendChild(todoTitle);
+        div.appendChild(todoText);
+        div.appendChild(todoSelect);
+        
+    
+
+        btnSelect.innerHTML = "done";
+        btnSelect.classList.add("btnSelectClass");
+        btnSelect.onclick = BtnOnclickDone;
+
+        div.appendChild(btnSelect);
+
+        div.classList.add("divPage");
+
+        out.appendChild(div);
+
+          
     // CreateOutPage();
-    // out.appendChild(div);
+
+
 }
 
 btn.onclick = function(){
@@ -70,7 +90,8 @@ function CreateTodo(){
 
 
 
-function CreateOutPage (){
+function CreateOutPage (event){
+    event.preventDefault();
     
     let div = document.createElement("div");
     let todoTitle = document.createElement("h4");
@@ -83,20 +104,13 @@ function CreateOutPage (){
     CreateTodo();
 
 
-    let outText = "";
-    let outDescription = "";
-    let outSelect = "";
 
     for(let key in todoList){
-        outText = todoList[key].todo;
-        outDescription = todoList[key].description;
-        outSelect = todoList[key].priority;
+        todoTitle.innerHTML= todoList[key].todo;
+        todoText.innerHTML= todoList[key].description;
+        todoSelect.innerHTML= todoList[key].priority;
 
     }
-    todoTitle.innerHTML = outText;
-    todoText.innerHTML = outDescription;
-    todoSelect.innerHTML = outSelect;
-
 
 
 
@@ -110,7 +124,7 @@ function CreateOutPage (){
     btnSelect.classList.add("btnSelectClass");
 
     div.appendChild(btnSelect);
-    
+
     btnSelect.onclick = function(){   
         div.style.backgroundColor = "rgb(200, 200, 200)";
         // out.removeChild(div);    
@@ -123,12 +137,20 @@ function CreateOutPage (){
 }
 
 
+///////
+function BtnOnclickDone() {   
+    div.style.backgroundColor = "rgb(200, 200, 200)";
+    // out.removeChild(div);    
+}
 
 /////////////////// фільтрація елементів
 
 searchIn.addEventListener("keyup", () => {
     let filterSearch = searchIn.value.toUpperCase();
     // console.log(filterSearch);
+
+    let divsOut = document.getElementsByClassName("divPage");
+    console.log(divsOut);
 
     let titeleOut = document.getElementsByTagName("h4");
     // console.log(titeleOut);
